@@ -3,7 +3,7 @@ import io from 'socket.io-client';
 import axios from 'axios';
 import './App.css'; 
 
-const socket = io('http://cricketlivescore.onrender.com'); 
+const socket = io('https://cricketlivescore.onrender.com'); 
 
 function App() {
   const [score, setScore] = useState({ batting_team: 'India', runs: 0, wickets: 0 });
@@ -23,7 +23,7 @@ function App() {
   const fetchScores = async () => {
     const batting_team = 'India';
     try {
-      const response = await axios.get('http://cricketlivescore.onrender.com/scores', {
+      const response = await axios.get('https://cricketlivescore.onrender.com/scores', {
         params: { batting_team },
       });
       setScore(response.data.data);
