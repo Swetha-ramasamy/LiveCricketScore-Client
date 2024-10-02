@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import io from 'socket.io-client';
 import axios from 'axios';
-import './App.css'; // Import your CSS file
+import './App.css'; 
 
-const socket = io('http://localhost:5001'); // Ensure this URL points to your backend server
+const socket = io('http://localhost:5001'); 
 
 function App() {
   const [score, setScore] = useState({ batting_team: 'India', runs: 0, wickets: 0 });
@@ -33,7 +33,7 @@ function App() {
   };
 
   useEffect(() => {
-    fetchScores(); // Fetch scores on component mount
+    fetchScores(); 
   }, []);
 
   return (
